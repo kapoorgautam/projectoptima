@@ -15,7 +15,7 @@ export default function ProblemsSection() {
       { property: "og:title", content: "Common Physiotherapy Problems | OptimPhysio Care Solutions" },
       { property: "og:description", content: "Discover why traditional physiotherapy fails and how OptimPhysio Care's home services solve wait times, costs, and recovery issues." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://optimaphysiocare.com/problems" },
+      { property: "og:url", content: "https://optimaphysiocare.in/problems" },
       { property: "og:site_name", content: "OptimPhysio Care" },
       { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -86,7 +86,7 @@ export default function ProblemsSection() {
   ];
 
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[#F3F4F6] via-white to-[#E6F0FA] overflow-hidden">
+    <section className="relative py-12 sm:py-16 md:py-20 bg-transparent overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-40 sm:w-72 h-40 sm:h-72 bg-gradient-to-r from-[#D1E7DD] to-[#E6F0FA] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute bottom-10 sm:bottom-20 right-5 sm:right-10 w-40 sm:w-72 h-40 sm:h-72 bg-gradient-to-r from-[#E6F0FA] to-[#D1E7DD] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
@@ -171,7 +171,7 @@ export default function ProblemsSection() {
         </main>
 
         <aside className={`text-center mt-8 sm:mt-12 md:mt-16 transform transition-all duration-1000 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-md max-w-xs sm:max-w-md md:max-w-2xl mx-auto border border-[#D1E7DD]" itemScope itemType="https://schema.org/Service">
+          {/* <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-md max-w-xs sm:max-w-md md:max-w-2xl mx-auto border border-[#D1E7DD]" itemScope itemType="https://schema.org/Service">
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#374151] mb-2 sm:mb-4" itemProp="name">
               Ready for Better Physiotherapy Solutions?
             </h3>
@@ -182,6 +182,7 @@ export default function ProblemsSection() {
             <button 
               className="group bg-gradient-to-r from-[#1E3A8A] to-[#10B981] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl text-sm sm:text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-1 sm:space-x-2 mx-auto"
               aria-label="Discover OptimPhysio Care physiotherapy solutions"
+              href= './treatment'
             >
               <span>Discover Our Physiotherapy Solution</span>
               <div className="w-3 sm:w-5 h-3 sm:h-5 bg-white rounded-full flex items-center justify-center ml-1 sm:ml-2 group-hover:translate-x-1 transition-transform">
@@ -196,7 +197,7 @@ export default function ProblemsSection() {
                 <span itemProp="name">OptimPhysio Care</span>
               </span>
             </div>
-          </div>
+          </div> */}
         </aside>
       </div>
 
