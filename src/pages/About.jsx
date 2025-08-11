@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, Award, Star, Clock } from 'lucide-react';
 import throttle from 'lodash.throttle';
+import {nikhilimg }from '../assets/nikhil.png'
 
 const AboutSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -361,7 +362,7 @@ const AboutSection = () => {
                 <div className="w-full max-w-sm mx-auto aspect-[3/4] bg-gradient-to-br from-blue-200/50 to-teal-200/50 rounded-2xl flex items-center justify-center backdrop-blur-sm">
                   <div className="text-center p-4">
                     <img
-                      src="src/assets/nikhil.png"
+                      src={nikhilimg}
                       alt="Dr. Nikhil Kapoor - Lead Physiotherapist at Optima Physio Care"
                       className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full mx-auto mb-4 object-fill shadow-lg"
                     />
