@@ -5,7 +5,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Users, Award, Star, Clock } from 'lucide-react';
+import { Users, Award, Star, Clock , Phone} from 'lucide-react';
 import throttle from 'lodash.throttle';
 // import {nikhilimg }from '../assets/nikhil.png'
 
@@ -485,9 +485,33 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
+         <section className="mt-12 sm:mt-16 text-center py-8 sm:py-12 bg-teal-50 rounded-2xl shadow-lg">
+                <h2 className="text-xl sm:text-2xl font-bold text-teal-700 mb-4 sm:mb-6">Ready to Start Your Recovery?</h2>
+                <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
+                  Contact Optima Physio Care today to schedule your consultation with Dr. Nikhil Kapoor and begin your journey to pain-free living.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <a
+                    href="tel:+91-8447646815"
+                    className="flex items-center justify-center px-6 sm:px-8 py-3 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-300"
+                    aria-label="Book a physiotherapy consultation with Dr. Nikhil Kapoor"
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    Book Now
+                  </a>
+                  <a
+                    href="/contact"
+                    className="flex items-center justify-center px-6 sm:px-8 py-3 border-2 border-teal-600 text-teal-600 rounded-full font-semibold hover:bg-teal-600 hover:text-white transition-all duration-300 hover:scale-105"
+                    aria-label="Contact Optima Physio Care"
+                  >
+                    Contact Us
+                  </a>
+                </div>
+              
+              </section>
       </section>
 
-      <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-teal-600 to-blue-600 relative overflow-hidden">
+      {/* <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-teal-600 to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-12 -left-12 w-24 h-24 bg-white/10 rounded-full animate-bounce hidden md:block" style={{ animationDuration: '4s' }} />
           <div className="absolute top-1/2 -right-8 w-16 h-16 bg-white/10 rounded-full animate-pulse hidden md:block" />
@@ -516,7 +540,9 @@ const AboutSection = () => {
           </div>
          
         </div>
-      </section>
+      </section> */}
+
+     
     </div>
   );
 };

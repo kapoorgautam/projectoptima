@@ -566,7 +566,7 @@ const PhysioTreatments = () => {
                   aria-label="Book a consultation for this treatment with Dr. Nikhil Kapoor"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Book Consultation
+                  Call Now
                 </a>
               </div>
             </div>
