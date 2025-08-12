@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Activity, Heart, Zap, Users, Target, Brain, Dumbbell, Shield, Clock, Star, ArrowRight, CheckCircle } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {Link} from 'react-router-dom'
 import Homeproblem from './Homeproblem.jsx'; // Ensure this component is available in your project
 
 // Register ScrollTrigger with GSAP
@@ -238,13 +239,13 @@ export default function ServicesSection() {
                         <div className="text-xs sm:text-xs text-gray-500">Success Rate</div>
                       </div>
                     </div>
-                    <a
-                      href="/contact"
+                    <Link
+                      to="/contact"
                       className={`w-full bg-gradient-to-r ${service.color} text-white py-1 sm:py-2 px-2 sm:px-4 rounded-full text-xs sm:text-sm font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-1 sm:space-x-2 group-hover:animate-pulse btn`}
                     >
                       <span>Book now</span>
                       <ArrowRight className="w-3 sm:w-4 h-3 sm:h-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </article>
@@ -296,22 +297,22 @@ export default function ServicesSection() {
                 Experience personalized care, faster recovery, and exceptional results - all in the comfort of your home.
               </p>
               <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 md:space-x-6 justify-center mb-4 sm:mb-6 md:mb-8">
-                <a
-                  href="treatment"
+                <Link
+                  to="treatment"
                   className="group bg-white text-blue-600 px-3 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-1 sm:space-x-2 btn"
                   aria-label="Explore physiotherapy services"
                 >
                   <span>Explore Treatment</span>
                   <ArrowRight className="w-3 sm:w-5 h-3 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a
-                  href="/contact"
+                </Link>
+                <Link
+                  to="/contact"
                   className="group border-2 border-white text-white px-3 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center space-x-1 sm:space-x-2 btn"
                   aria-label="Book a consultation"
                 >
                   <span>Book Consultation</span>
                   <ArrowRight className="w-3 sm:w-5 h-3 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </div>
               <div className="flex flex-wrap justify-center items-center space-x-4 sm:space-x-8 opacity-90">
                 <div className="flex items-center space-x-1 animate-pulse">

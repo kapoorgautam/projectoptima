@@ -9,7 +9,7 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Play, CheckCircle, Phone, MapPin, Clock, Sparkles, Star, MessageCircle } from 'lucide-react';
-
+import { Link } from 'react-router-dom'; 
 export default function PhysioHeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [currentService, setCurrentService] = useState(0);
@@ -502,23 +502,23 @@ export default function PhysioHeroSection() {
                   isVisible.buttons ? 'animate-slideInLeft' : 'opacity-0'
                 }`}
               >
-                <a
-                  href="./contact"
+                <Link
+                  to="http://localhost:5173/contact"
                   className="group btn-modern bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-4 rounded-2xl text-lg font-bold hover-lift shadow-2xl flex items-center justify-center space-x-3"
                   aria-label="Book a free physiotherapy consultation with Dr. Nikhil Kapoor"
                 >
                   <span>Book Free Consultation</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                </a>
+                </Link>
                 
-                <a
-                  href="./treatment"
+                <Link
+                  to="./treatment"
                   className="group btn-modern glass-morphism text-gray-700 px-8 py-4 rounded-2xl text-lg font-bold hover-lift shadow-xl flex items-center justify-center space-x-3 border border-white/50"
                   aria-label="Explore physiotherapy treatments at Optima Physio Care"
                 >
                   <Play className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
                   <span>Explore Treatments</span>
-                </a>
+                </Link>
               </div>
 
               <div 
@@ -528,8 +528,8 @@ export default function PhysioHeroSection() {
                   isVisible['contact-info'] ? 'animate-fadeIn' : 'opacity-0'
                 }`}
               >
-                <a
-                  href="tel:+918447646815"
+                <Link
+                  to="tel:+918447646815"
                   className="flex items-center space-x-3 glass-morphism px-4 py-3 rounded-2xl text-gray-600 hover:text-blue-600 hover-lift transition-all duration-300 group shadow-lg"
                   aria-label="Call Optima Physio Care at +91 8447646815"
                 >
@@ -538,10 +538,10 @@ export default function PhysioHeroSection() {
                     <div className="font-bold text-sm">Call Now</div>
                     <div className="text-xs">+91 8447646815</div>
                   </div>
-                </a>
+                </Link>
                 
-                <a
-                  href="https://wa.me/+918447646815"
+                <Link
+                  to="https://wa.me/+918447646815"
                   className="flex items-center space-x-3 glass-morphism px-4 py-3 rounded-2xl text-gray-600 hover:text-green-600 hover-lift transition-all duration-300 group shadow-lg"
                   aria-label="Contact Optima Physio Care via WhatsApp"
                   target="_blank"
@@ -552,7 +552,7 @@ export default function PhysioHeroSection() {
                     <div className="font-bold text-sm">WhatsApp</div>
                     <div className="text-xs">Chat Now</div>
                   </div>
-                </a>
+                </Link>
                 
                 <div className="flex items-center space-x-3 glass-morphism px-4 py-3 rounded-2xl text-gray-600 shadow-lg">
                   <MapPin className="w-5 h-5 text-red-500 pulse-ring" />

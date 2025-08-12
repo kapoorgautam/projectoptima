@@ -16,6 +16,7 @@ import {
   Award,
 } from 'lucide-react';
 import throttle from 'lodash.throttle';
+import { Link } from 'react-router-dom'; 
 
 const ContactUsForm = () => {
   const [formData, setFormData] = useState({
@@ -324,7 +325,7 @@ const ContactUsForm = () => {
             visibleElements['contact-section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm font-medium mb-6 mt-14">
             <Heart className="w-4 sm:w-5 h-4 sm:h-5" />
             <span>Get In Touch</span>
           </div>
@@ -373,9 +374,9 @@ const ContactUsForm = () => {
               {contactInfo.map((info, index) => {
                 const IconComponent = info.icon;
                 return (
-                  <a
+                  <Link
                     key={index}
-                    href={info.link}
+                    to={info.link}
                     ref={(el) => (elementRefs.current[index + 1] = el)}
                     className={`group bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-blue-200 transform cursor-pointer ${
                       visibleElements[`element-${index + 1}`] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
@@ -400,7 +401,7 @@ const ContactUsForm = () => {
                         <p className="text-gray-500 text-xs mt-1">{info.description}</p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 );
               })}
             </div>
@@ -416,22 +417,22 @@ const ContactUsForm = () => {
                 For urgent physiotherapy needs in Haryana or Delhi NCR, call us directly or request an emergency home visit.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <a
-                  href="tel:+918447646815"
+                <Link
+                  to="tel:+918447646815"
                   className="flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 bg-white text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105"
                   aria-label="Call for immediate assistance"
                 >
                   <Phone className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
                   Call Now
-                </a>
-                <a
-                  href="/appointment?urgency=emergency"
+                </Link>
+                <Link
+                  to="tel:+918447646815'"
                   className="flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 bg-white/20 text-white rounded-full font-semibold hover:bg-white/30 transition-all duration-300 hover:scale-105"
                   aria-label="Request emergency visit"
                 >
                   <Calendar className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
-                  Emergency Visit
-                </a>
+                  Emergency Call
+                </Link>
               </div>
             </div>
 

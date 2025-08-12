@@ -18,6 +18,7 @@ import {
   ArrowUp,
   X
 } from 'lucide-react';
+import {Link} from 'react-router-dom'
 
 // Modal Component for Legal Pages
 const Modal = ({ isOpen, onClose, title, children }) => {
@@ -1085,9 +1086,9 @@ const OptimizedFooter = () => {
                 {/* Enhanced Social Links */}
                 <div className="flex space-x-4" role="list" aria-label="Follow us on social media">
                   {socialLinks.map((social, index) => (
-                    <a
+                    <Link
                       key={index}
-                      href={social.href}
+                      to={social.href}
                       rel={social.rel}
                       target="_blank"
                       title={`Follow OptimaPhysio Care on ${social.name} for health tips and updates`}
@@ -1097,7 +1098,7 @@ const OptimizedFooter = () => {
                     >
                       <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" aria-hidden="true" />
                       <span className="sr-only">Follow us on {social.name}</span>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -1110,8 +1111,8 @@ const OptimizedFooter = () => {
                 <ul className="space-y-3">
                   {quickLinks.map((link, index) => (
                     <li key={index}>
-                      <a
-                        href={link.href}
+                      <Link
+                        to={link.href}
                         title={link.title}
                         className="group flex items-center text-gray-300 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1 py-1"
                       >
@@ -1119,7 +1120,7 @@ const OptimizedFooter = () => {
                         <span className="group-hover:translate-x-1 transition-transform duration-300">
                           {link.name}
                         </span>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -1133,8 +1134,8 @@ const OptimizedFooter = () => {
                 <ul className="space-y-3">
                   {services.map((service, index) => (
                     <li key={index}>
-                      <a
-                        href={service.href}
+                      <Link
+                        to={service.href}
                         onClick={(e) => openModal(service.modalKey, e)}
                         title={service.title}
                         className="group flex items-center text-gray-300 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1 py-1 cursor-pointer"
@@ -1143,7 +1144,7 @@ const OptimizedFooter = () => {
                         <span className="group-hover:translate-x-1 transition-transform duration-300">
                           {service.name}
                         </span>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

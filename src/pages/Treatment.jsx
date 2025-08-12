@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { X, ArrowLeft, Phone, Heart, Clock, Users, Award, Star } from 'lucide-react';
 import throttle from 'lodash.throttle';
+import { Link } from 'react-router-dom'; 
 
 const PhysioTreatments = () => {
   const [selectedTreatment, setSelectedTreatment] = useState(null);
@@ -341,7 +342,7 @@ const PhysioTreatments = () => {
       <article
         ref={(el) => (treatmentReferences.current[index] = el)}
         data-id={`treatment-${index}`}
-        className={`group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-xl cursor-pointer border-2 border-transparent hover:border-teal-200 transform transition-all duration-300`}
+        className={`group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-xl cursor-pointer border-2 border-transparent hover:border-teal-200 transform transition-all duration-300 `}
         onClick={() => openModal(treatmentKey)}
         role="button"
         tabIndex={0}
@@ -353,7 +354,7 @@ const PhysioTreatments = () => {
         }}
         aria-label={`Learn more about ${treatment.title}`}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 " />
         <div className="relative z-10 p-6 sm:p-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-teal-600 to-blue-600 mb-6">
             {getAppropriateIcon(treatmentKey)}
@@ -454,7 +455,7 @@ const PhysioTreatments = () => {
         </script>
       </Helmet>
 
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none hidden md:block">
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none hidden md:block ">
         <div className="absolute top-10 left-20 w-6 h-6 bg-gradient-to-r from-teal-400 to-blue-400 rounded-full opacity-50" />
         <div className="absolute bottom-20 right-16 w-8 h-8 bg-gradient-to-r from-blue-400 to-teal-400 rounded-full opacity-40" />
       </div>
@@ -466,7 +467,7 @@ const PhysioTreatments = () => {
             visibleElements['section'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm font-medium mb-6 mt-8">
             <Heart className="w-4 sm:w-5 h-4 sm:h-5" />
             <span>Expert Care</span>
           </div>
@@ -491,21 +492,21 @@ const PhysioTreatments = () => {
             Contact Optima Physio Care today to schedule your consultation with Dr. Nikhil Kapoor and begin your journey to pain-free living.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+91-8447646815"
+            <Link
+              to="tel:+91-8447646815"
               className="flex items-center justify-center px-6 sm:px-8 py-3 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-300"
               aria-label="Book a physiotherapy consultation with Dr. Nikhil Kapoor"
             >
               <Phone className="mr-2 h-5 w-5" />
               Book Now
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="flex items-center justify-center px-6 sm:px-8 py-3 border-2 border-teal-600 text-teal-600 rounded-full font-semibold hover:bg-teal-600 hover:text-white transition-all duration-300 hover:scale-105"
               aria-label="Contact Optima Physio Care"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         
         </section>
@@ -560,14 +561,14 @@ const PhysioTreatments = () => {
                   <ArrowLeft className="mr-2 h-5 w-5" />
                   Back to Treatments
                 </button>
-                <a
-                  href="tel:+918447646815"
+                <Link
+                  to="tel:+918447646815"
                   className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-300"
                   aria-label="Book a consultation for this treatment with Dr. Nikhil Kapoor"
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now
-                </a>
+                </Link>
               </div>
             </div>
           </div>

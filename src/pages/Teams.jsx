@@ -792,7 +792,7 @@
 //         </div>
 //         <div className="flex gap-4">
 //           <a
-//             href={doctor.profileLink}
+//             to={doctor.profileLink}
 //             className="flex-1 bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-700 hover:to-green-600 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2"
 //             aria-label={`View details for ${doctor.name}`}
 //             onClick={(e) => {
@@ -804,7 +804,7 @@
 //             <ArrowRight className="w-4 h-4" />
 //           </a>
 //           <a
-//             href="/appointment"
+//             to="/appointment"
 //             className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-full transition-all duration-300 border border-gray-300 text-center"
 //             aria-label={`Book appointment with ${doctor.name}`}
 //           >
@@ -939,14 +939,14 @@
 //                   </div>
 //                   <div className="grid grid-cols-2 gap-4 pt-6">
 //                     <a
-//                       href="/appointment"
+//                       to="/appointment"
 //                       className="bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-700 hover:to-green-600 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105"
 //                       aria-label={`Book appointment with ${selectedDoctor.name}`}
 //                     >
 //                       Book Appointment
 //                     </a>
 //                     <a
-//                       href="tel:+919876543210"
+//                       to="tel:+919876543210"
 //                       className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-full transition-all duration-300 border border-gray-300 text-center"
 //                       aria-label={`Call ${selectedDoctor.name}`}
 //                     >
@@ -1093,7 +1093,7 @@
 //             </div>
 //             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
 //               <a
-//                 href="/appointment"
+//                 to="/appointment"
 //                 className="group bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-700 hover:to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
 //                 aria-label="Book a physiotherapy consultation"
 //               >
@@ -1101,7 +1101,7 @@
 //                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
 //               </a>
 //               <a
-//                 href="tel:+919876543210"
+//                 to="tel:+919876543210"
 //                 className="bg-white text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg transform hover:scale-105 transition-all duration-300"
 //                 aria-label="Call to book an appointment"
 //               >
@@ -2544,6 +2544,7 @@ import {
   Sparkles,
   Phone,
 } from 'lucide-react';
+import {Link} from 'react-router-dom'
 // import {nikhilimg }from './nikhil.png'
 
 export default function TeamsPage() {
@@ -2922,28 +2923,28 @@ export default function TeamsPage() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <a
-                      href="tel:+918447646815"
+                    <Link
+                      to="tel:+918447646815"
                       className="w-full btn-modern bg-gradient-to-r from-coral-600 to-teal-500 text-white py-3 px-6 rounded-xl font-semibold hover-lift flex items-center justify-center space-x-2"
                       aria-label="Book consultation with Dr. Nikhil Kapoor"
                     >
                       <Users className="w-4 h-4" />
                       <span>Book Consultation</span>
-                    </a>
-                    <a
-                      href="https://api.whatsapp.com/send/?phone=918447646815&text&type=phone_number&app_absent=0"
+                    </Link>
+                    <Link
+                      to="https://api.whatsapp.com/send/?phone=918447646815&text&type=phone_number&app_absent=0"
                       className="w-full btn-modern glass-morphism text-stone-700 py-3 px-6 rounded-xl font-semibold hover-lift flex items-center justify-center space-x-2 border border-white/50"
                       aria-label="Send message to Dr. Nikhil Kapoor"
                     >
                       <Star className="w-4 h-4 text-coral-600" />
                       <span>Send Message</span>
-                    </a>
+                    </Link>
                   </div>
                   {/* <div className="mt-6 text-center">
                     <h3 className="text-sm font-semibold text-stone-800 mb-3">Connect With Us</h3>
                     <div className="flex justify-center gap-3">
                       <a
-                        href="https://www.linkedin.com/in/nikhil-kapoor-68072b24a"
+                        to="https://www.linkedin.com/in/nikhil-kapoor-68072b24a"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn profile of Dr. Nikhil Kapoor"
@@ -2951,7 +2952,7 @@ export default function TeamsPage() {
                         <img src="/icons/linkedin.svg" alt="LinkedIn" className="w-6 h-6 hover:opacity-80" />
                       </a>
                       <a
-                        href="https://www.facebook.com/people/optima-physio-care/100094770625926/"
+                        to="https://www.facebook.com/people/optima-physio-care/100094770625926/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Facebook page of Optima Physio Care"
@@ -2959,7 +2960,7 @@ export default function TeamsPage() {
                         <img src="/icons/facebook.svg" alt="Facebook" className="w-6 h-6 hover:opacity-80" />
                       </a>
                       <a
-                        href="https://www.instagram.com/optimaphysiocare/"
+                        to="https://www.instagram.com/optimaphysiocare/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram profile of Optima Physio Care"
@@ -3176,7 +3177,7 @@ export default function TeamsPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
-                    href="tel:+91-8447646815"
+                    to="tel:+91-8447646815"
                     className="flex items-center justify-center px-6 sm:px-8 py-3 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-300"
                     aria-label="Book a physiotherapy consultation with Dr. Nikhil Kapoor"
                   >
@@ -3184,7 +3185,7 @@ export default function TeamsPage() {
                     Book Now
                   </a>
                   <a
-                    href="/contact"
+                    to="/contact"
                     className="flex items-center justify-center px-6 sm:px-8 py-3 border-2 border-teal-600 text-teal-600 rounded-full font-semibold hover:bg-teal-600 hover:text-white transition-all duration-300 hover:scale-105"
                     aria-label="Contact Optima Physio Care"
                   >

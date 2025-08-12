@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Phone, Star, ArrowRightCircle } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom'; 
 
 // Register ScrollTrigger with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -139,22 +140,22 @@ export default function CallToActionSection() {
             Book your home physiotherapy session with OptimPhysio Care today and experience personalized care from India’s top experts. Act now for a healthier tomorrow!
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <a
-              href="tel:+918447646815"
+            <Link
+              to="tel:+918447646815"
               className="group bg-white text-blue-600 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full sm:rounded-xl text-sm sm:text-base md:text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 sm:space-x-3 btn"
               aria-label="Explore our services"
             >
               <span>Call Now</span>
               <ArrowRightCircle className="w-5 sm:w-6 h-5 sm:h-6 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="group border-2 border-blue-600 text-blue-600 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full sm:rounded-xl text-sm sm:text-base md:text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2 sm:space-x-3 btn"
               aria-label="Book a consultation"
             >
               <span>Book Consultation</span>
               <ArrowRightCircle className="w-5 sm:w-6 h-5 sm:h-6 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </div>
         </div>
 

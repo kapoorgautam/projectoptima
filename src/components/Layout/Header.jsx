@@ -791,12 +791,12 @@ const Header = () => {
                 ))}
               </div>
               <Link
-                to="/appointment"
+                to="tel:+918447646815 "
                 title="Book your physiotherapy appointment with Dr. Nikhil Kapoor"
                 className="ml-4 bg-teal-500 hover:bg-teal-600 text-white text-sm px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                 aria-label="Book a physiotherapy consultation"
               >
-                Get Started
+                Call Now
               </Link>
             </div>
 
@@ -855,7 +855,7 @@ const Header = () => {
                     aria-label={`Visit our ${social.name} page`}
                     rel={social.rel}
                     title={`Follow us on ${social.name}`}
-                    className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-green-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                    className="w-9 h-9 text-white bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-green-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                     role="menuitem"
                     target="_blank"
                   >
@@ -864,14 +864,14 @@ const Header = () => {
                 ))}
               </div>
               <Link
-                to="/appointment"
+                to="tel:+918447646815"
                 title="Book your physiotherapy appointment with Dr. Nikhil Kapoor"
                 className="mt-4 block w-full bg-teal-500 hover:bg-teal-600 text-white text-sm px-4 py-2 rounded-full transition-all duration-300 text-center focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                 role="menuitem"
                 aria-label="Book a physiotherapy consultation"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Get Started
+                Call Now
               </Link>
             </div>
           )}

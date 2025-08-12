@@ -9,7 +9,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, Award, Users, Clock, CheckCircle, Quote, Sparkles } from 'lucide-react';
-
+import {Link} from 'react-router-dom'
 const TestimonialsAndTrust = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -468,18 +468,18 @@ const TestimonialsAndTrust = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <a
-            href="/treatment"
+          <Link
+            to="/treatment"
             className="btn-modern bg-white text-blue-600 px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-semibold hover:bg-gray-50 hover-lift shadow-md"
           >
             Explore Treatment
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="btn-modern border-2 border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-semibold hover:bg-white hover:text-blue-600 hover-lift"
           >
             Book Consultation
-          </a>
+          </Link>
         </div>
       </div>
     </div>

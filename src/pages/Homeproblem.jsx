@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AlertTriangle, Clock, MapPin, TrendingDown, Users, DollarSign, Heart, Zap } from 'lucide-react';
-
+// import {Link} from 'react-router-dom'
 export default function ProblemsSection() {
   useEffect(() => {
     document.title = "Common Physiotherapy Problems | OptimPhysio Care - Home Physiotherapy Services";
