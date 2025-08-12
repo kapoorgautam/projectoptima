@@ -148,7 +148,7 @@ export default function CallToActionSection() {
               <ArrowRightCircle className="w-5 sm:w-6 h-5 sm:h-6 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="/book-consultation"
+              href="/contact"
               className="group border-2 border-blue-600 text-blue-600 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full sm:rounded-xl text-sm sm:text-base md:text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2 sm:space-x-3 btn"
               aria-label="Book a consultation"
             >

@@ -340,15 +340,15 @@ const ContactUsForm = () => {
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-6 text-sm text-gray-600">
             <div className="flex items-center space-x-2">
               <Star className="w-4 h-4 text-yellow-500" />
-              <span>4.9/5 Client Rating</span>
+              <span>4.8/5 Client Rating</span>
             </div>
             <div className="flex items-center space-x-2">
               <Award className="w-4 h-4 text-blue-500" />
-              <span>15+ Years Experience</span>
+              <span>5+ Years Experience</span>
             </div>
             <div className="flex items-center space-x-2">
               <Heart className="w-4 h-4 text-red-500" />
-              <span>10,000+ Patients Treated</span>
+              <span>2000+ Patients Treated</span>
             </div>
           </div>
         </header>
