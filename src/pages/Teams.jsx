@@ -2543,7 +2543,7 @@ import {
   Target,
   Sparkles,
 } from 'lucide-react';
-import {nikhilimg }from '../assets/nikhil.png'
+// import {nikhilimg }from './nikhil.png'
 
 export default function TeamsPage() {
   const [isVisible, setIsVisible] = useState({});
@@ -2882,7 +2882,7 @@ export default function TeamsPage() {
                   <div className="relative mb-6 group">
                     <div className="relative w-48 h-48 mx-auto rounded-2xl overflow-hidden hover-lift shadow-xl">
                       <img
-                        src={nikhilimg}
+                        src="./nikhil.png"
                         alt="Dr. Nikhil Kapoor - Expert Physiotherapist at Optima Physio Care"
                         className="w-full h-full object-top transition-transform duration-700 group-hover:scale-110"
                         loading="lazy"
