@@ -585,9 +585,9 @@ export default function PhysioHeroSection() {
                     <div className="relative mb-6 group">
                       <div className="relative w-full h-64 sm:h-80 rounded-xl overflow-hidden hover-lift shadow-lg">
                         <img
-                          src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&crop=center"
+                          src="./nikhil.png"
                           alt="Dr. Nikhil Kapoor providing expert physiotherapy at Optima Physio Care in Delhi NCR"
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="w-full h-full object-top transition-transform duration-500 group-hover:scale-105"
                           loading="lazy"
                           width="600"
                           height="400"
